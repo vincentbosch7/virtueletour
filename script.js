@@ -59,7 +59,7 @@ player.on('loaded', function() {
         $('.video-container').removeClass('theexit');
     }
 });
-        
+
 //When click on open-floor
 $('.open-floor').on('click', function() {
     $('.buttons').hide();
@@ -68,28 +68,46 @@ $('.open-floor').on('click', function() {
     var floorclicked = $(this).data("gotofloor");
     $('.verdieping').removeClass('currentlocation');
     $('.'+floorclicked).addClass('currentlocation');
+    
+    var currentvimeo = $('.locatie').find('.currentvid').data("vimeo-nr");
 
     $('.locatie').find('.playthisvid').removeClass('currentvid');
     $('.'+floorclicked).find('.playthisvid').first().addClass('currentvid');
 
     var vimeonr = $('.currentvid').data("vimeo-nr");
 
-    player.loadVideo(vimeonr).then(function() {
+    if(currentvimeo == vimeonr) {
+        player.setCurrentTime(0);
         player.play();
-    });
+    } else {
+        player.loadVideo(vimeonr).then(function() {
+            player.play();
+        });
+    }
+    
 });
 
 //Klikken op lokaal in locatie-tab
 $('.locatie .playthisvid').on('click', function() {
     $('.buttons').hide();
+    var currentvimeo = $('.locatie').find('.currentvid').data("vimeo-nr");
     $('.locatie').find('.playthisvid').removeClass('currentvid');
     $(this).addClass('currentvid');
     var vimeonr = $(this).data("vimeo-nr");
-
-    player.loadVideo(vimeonr).then(function() {
+    
+    if(currentvimeo == vimeonr) {
+        player.setCurrentTime(0);
         player.play();
-    });
+    } else {
+        player.loadVideo(vimeonr).then(function() {
+            player.play();
+        });
+    }
+
 });
+
+
+
 
 //click on play button
 $('.play').on('click', function() {
@@ -108,7 +126,7 @@ $('.replay').on('click', function() {
 	$('.legenda').removeClass('opened');
 	$('.buttons').fadeOut();
 });
-        
+
 //Klikken op 'volgende video' pijl-naar-rechts-knop
 $('.playnextvid').on('click', function() {
     $('.buttons').hide();
@@ -123,7 +141,7 @@ $('.playnextvid').on('click', function() {
         player.play();
     });
 
-    } else {
+    } else { 
         var currentlocation = $('.currentlocation');
         var nextlocation = currentlocation.next();
         $('.locatie').find('.verdieping').removeClass('currentlocation');
