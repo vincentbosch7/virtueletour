@@ -360,7 +360,7 @@ h1 {
     z-index: 2;
     max-width:320px;
     width:auto;
-	transform:translateX(calc(-100% - 60px));
+	transform:translateX(calc(-100% - 61px));
 	transition: 0.5s ease;
 }
 .legenda::before {
