@@ -8,7 +8,7 @@ $('.legenda-close, .legenda .open-floor:not(.na)').on('click', function() {
     $('.legenda').removeClass('opened');
 })
 
-//click on Home button
+//click on Home button 
 $('.home, .gohome').on('click', function() {
     location.reload();
 });
