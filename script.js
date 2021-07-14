@@ -4,7 +4,7 @@
 $('.legenda-open').on('click', function() {
     $('.legenda').addClass('opened');
 })
-$('.legenda-close, .legenda .open-floor').on('click', function() {
+$('.legenda-close, .legenda .open-floor:not(.na)').on('click', function() {
     $('.legenda').removeClass('opened');
 })
 
