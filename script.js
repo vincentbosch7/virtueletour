@@ -146,7 +146,7 @@ $('.playnextvid').on('click', function() {
         var nextlocation = currentlocation.next();
         $('.locatie').find('.verdieping').removeClass('currentlocation');
         var currentfloor = $('.current-parent');
-        var nextfloor = currentfloor.nextAll('.open-floor:first');
+        var nextfloor = currentfloor.nextAll('.open-floor:not(.na):first');
         $('.legenda-content').find('.open-floor').removeClass('current-parent');
 
         if (nextlocation.length) {
