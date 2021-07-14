@@ -61,7 +61,7 @@ player.on('loaded', function() {
 });
 
 //When click on open-floor
-$('.open-floor').on('click', function() {
+$('.open-floor:not(.na)').on('click', function() {
     $('.buttons').hide();
     $('.open-floor').removeClass('current-parent');
     $(this).addClass('current-parent');
