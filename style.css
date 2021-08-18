@@ -538,7 +538,7 @@ a:not([href]) {
 	.legenda-content {
 		padding:8px 15px;
 	}
-    .legenda a, .legenda .open-floor {
+    .legenda a, .legenda .open-floor, .legenda .novid {
         padding:4px 0;
     }
     .legenda-open {
