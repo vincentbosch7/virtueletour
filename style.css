@@ -463,7 +463,7 @@ h1 {
     background:#FFFF00;
     overflow: hidden;
 }
-.legenda a, .legenda .open-floor {
+.legenda a, .legenda .open-floor, .legenda .novid {
     text-decoration: none;
     color:black;
     font-weight:Bold;
@@ -474,6 +474,10 @@ h1 {
 	width:100%;
 	display:block;
 	float:left;
+}
+.legenda .novid {
+	cursor:default;
+	color:#afafaf;
 }
 a:not([href]) {
     cursor: default;
