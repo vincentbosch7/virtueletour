@@ -381,7 +381,7 @@ h1 {
     bottom:60px;
     left:60px;
     z-index: 2;
-    max-width:240px;
+    max-width:340px;
     width:auto;
 	transform:translateX(calc(-100% - 60px));
 	transition: 0.5s ease;
@@ -474,6 +474,9 @@ h1 {
 	width:100%;
 	display:block;
 	float:left;
+}
+.legenda .legenda-content.split a, .legenda .legenda-content.split .open-floor, .legenda .legenda-content.split .novid {
+	width:50%;
 }
 .legenda .novid {
 	cursor:default;
