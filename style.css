@@ -43,7 +43,6 @@ html {
 }
 
 video, iframe {
-	pointer-events: none;
 	object-fit:fill;
 }
 
