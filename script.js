@@ -39,8 +39,8 @@ loopplayer.on('loaded', function() {
 });
 
 //Button that starts the tour
-$('.starttour').on('click', function() {
-    $(this).hide();
+$('.introvideo').on('click', function() {
+    $('.starttour').hide();
     $('.video-container').removeClass('startloop');
     $('.video-container').addClass('startvideos');
     player.setVolume(1);
