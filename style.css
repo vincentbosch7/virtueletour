@@ -147,7 +147,7 @@ h1 {
 	cursor:pointer;
 }
 .starttour, .startloop .welkom {
-	pointer-events:none;
+	pointer-events:all;
 }
 .startvideos .introvideo {
     display: none;
